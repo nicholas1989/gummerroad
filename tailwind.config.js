@@ -1,7 +1,7 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
-    './templates/**/*.html',
+    './django/templates/**/*.html',
     './**/templates/**/*.html',
   ],
   theme: {

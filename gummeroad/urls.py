@@ -6,7 +6,7 @@ from django.contrib.auth.views import LoginView
 from django.urls import path, include
 
 from gum_road.views import home_page
-from products.views import ProductListView
+from products.views import ProductListView, ProductDetailView
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -14,6 +14,7 @@ urlpatterns = [
     path('', home_page, name='home_page'),
     path('login/', LoginView.as_view(), name='login'),
     path('discover/', ProductListView.as_view(), name="discover"),
+    path('p/', include('products.urls', namespace='products')),
     path('gum_road/', include('gum_road.urls', namespace="gum_road")),
     
 ]

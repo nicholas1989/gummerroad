@@ -10,7 +10,9 @@
             <div class="w-12/12 mx-auto rounded-2xl bg-white p-5 bg-opacity-40 backdrop-filter backdrop-blur-lg">
 
                 <div class="flex justify-between items-center mb-4">
-                    <a href="#" class="px-4 py-2 bg-gray-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition duration-300">Create a Product</a>
+                    <a href="{% url 'product-create' %}" class="px-4 py-2 bg-gray-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition duration-300">
+                        Create a Product
+                    </a>
                 </div>
 
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 text-center px-2 mx-auto">
@@ -54,7 +56,7 @@
                             <h3 class="font-medium text-xl leading-8">
                                 <a href="{{ products.get_absolute_url }}"
                                     class="block relative group-hover:text-red-700 transition-colors duration-200 ">
-                                    Instant display at your Fingertips
+                                    {{ products.description }}
                                 </a>
                             </h3>
                             <div>

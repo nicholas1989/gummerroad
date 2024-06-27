@@ -7,7 +7,11 @@ from django.urls import path, include
 
 from gum_road.views import Homepage, SignupView, verify_email
 from gum_road.forms import EmailAuthenticationForm
-from products.views import ProductListView, UserProductListView
+from products.views import (
+    ProductListView, 
+    UserProductListView,
+    ProductCreateView
+)
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -19,6 +23,7 @@ urlpatterns = [
     path('logout/', LogoutView.as_view(), name="logout"),
     path('discover/', ProductListView.as_view(), name="discover"),
     path('products/', UserProductListView.as_view(), name="user-products"),
+    path('products/create/',ProductCreateView.as_view(), name="product-create"),
     path('p/', include('products.urls', namespace='products')),
     path('gum_road/', include('gum_road.urls', namespace="gum_road")),
     # path('users/', include('users.urls')),

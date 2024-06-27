@@ -13,5 +13,6 @@ class ProductModelForm(forms.ModelForm):
             'slug',
             'content_url',
             'content_file',
-            'price',    
+            'price',
+            'active',    
         )

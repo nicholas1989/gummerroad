@@ -35,11 +35,16 @@
                         {{ product.description }}
                     </a>
                 </h3>
+                <!-- Edit button -->
+                <div class="flex justify-end mt-4">
+                    <a href="{{ product.get_update_url }}" class="px-4 py-2 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition duration-300">
+                        Edit Product
+                    </a>
+                </div>
             </article>
 
         </div>
     </div>
 </div>
-
 
 {% endblock content %}
